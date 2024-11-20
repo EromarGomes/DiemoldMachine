@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Website</h1>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Inventory</li>
+                <li>Time Sheet</li>
+                <li>Po Register</li>
+                <li>Misc</li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <aside>
+            <h2>Functions</h2>
+            <ul>
+                <li>Function 1</li>
+                <li>Function 2</li>
+                <li>Function 3</li>
+            </ul>
+        </aside>
+
+        <main>
+
+            {% block content %} 
+            {% endblock %}
+        
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 My Website</p>
+    </footer>
+
+    <script>
+        document.getElementById("submit-btn").addEventListener("click", function() {
+            const inputValue = document.getElementById("input-box").value;
+            document.getElementById("display-area").innerText = inputValue;
+        });
+    </script>
+</body>
+</html>
